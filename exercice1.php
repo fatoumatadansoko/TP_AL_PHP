@@ -6,35 +6,43 @@
     <title>Exercice1</title>
 </head>
 <body>
-    
+<h1>p
+        
 
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-$i =0;
-$p =1;
+
+
 $tab = array();
-$p=1;
+$n= (int)readline("donnez la taille du tableau");
 
-for ($i = 0 ; $i <= 5; $i++) {
+for ($i = 0 ; $i <= $n; $i++) {
 
-    echo "vueillez entrez les elements";
+    $Element = (int)readline ("Veillez entrez un élement");
 
-    $tab{} = intval(trim(fgets(STDIN)));
+    $tab[] = (int)$Element;
 
     //Lire l'entrée utilisateur depuis la console
 
     //Afficher le nombre saisi
 
-    echo "Vous avez saisi:" . $tab{$i} ."\n";
+    }
+    echo "Affichage du contenu";
+    print_r($tab);
 
-    $p = $p * $tab{$i};
 
-    echo "le produit est de :" . $p ."\n";
-}
+    $Produit =1;
+    foreach ($tab as $value) {
+        $Produit *= $value;
+    }
+
+    echo "le produit est de :" . $Produit ."\n";
+
 ?>
+</h1>
 
 </body>
 </html>
